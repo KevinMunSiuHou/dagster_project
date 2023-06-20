@@ -1,6 +1,14 @@
-<!-- Virtual Enviroment -->
+# Virtual Enviroment
 python -m venv dagster_env
 dagster_env\Scripts\activate
+
+# Install dagster into it
+pip install dagster dagit
+
+# Start a project
+dagster project scaffold --name dagster_project
+
+# After finish, deactivate the virtual env.
 deactivate
 
 # dagster_project
