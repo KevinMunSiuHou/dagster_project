@@ -1,8 +1,9 @@
 *.db
 .env
-tmpfw5c1usn/
+tmp*
 dagster_project.egg-info/
+dagster_project_tests/
 *.pyc
 dagster_env/
 *.cfg
-*.toml
+*__pycache__
