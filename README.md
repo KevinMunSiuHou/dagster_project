@@ -8,6 +8,9 @@ pip install dagster dagit
 # Start a project
 dagster project scaffold --name dagster_project
 
+# Install Python Library
+pip install -r requirements.txt
+
 # After finish, deactivate the virtual env.
 deactivate
 
