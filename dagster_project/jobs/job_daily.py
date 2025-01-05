@@ -4,8 +4,10 @@ job__trading_view_market_data = define_asset_job(
     "trading_view_market_data_job",
     selection = (
         AssetSelection.keys(
-            "temporary_usage/extract_trading_view",
-            "temporary_usage/compare_trading_view"
+            "temporary_usage/extract_trading_view_xauusd",
+            "temporary_usage/compare_trading_view_xauusd",
+            "temporary_usage/extract_trading_view_btcusd",
+            "temporary_usage/compare_trading_view_btcusd"
         )
     ),
 )

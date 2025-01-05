@@ -29,10 +29,10 @@ def format_data(data):
         )
     return final_df
 
-def extract_data():
+def extract_data(symbol:str):
     ws = create_connection(socket)
     create_msg(ws, func="chart_create_session", arg= [os.getenv('token_trading_view'), ""])
-    create_msg(ws, func="resolve_symbol", arg= [os.getenv('token_trading_view'),"sds_sym_1","={\"adjustment\":\"splits\",\"currency-id\":\"USD\",\"session\":\"regular\",\"symbol\":\"OANDA:XAUUSD\"}"])
+    create_msg(ws, func="resolve_symbol", arg=["cs_OjFXwReC3y0p", "sds_sym_1", f"={{\"adjustment\":\"splits\",\"currency-id\":\"USD\",\"session\":\"regular\",\"symbol\":\"{symbol}\"}}"])
     create_msg(ws, func="create_series", arg= [os.getenv('token_trading_view'),"sds_1","s1","sds_sym_1","1",10000,""])
     create_msg(ws, func="create_study", arg=[os.getenv('token_trading_view'),"st9","st1","sds_1","BarSetContinuousRollDates@tv-corestudies-28",{"currenttime":"now"}])
     df = pd.DataFrame()
